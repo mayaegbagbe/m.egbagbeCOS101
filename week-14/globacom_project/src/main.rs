@@ -1,4 +1,5 @@
 use std::io::Read;
+use std::io;
 fn main(){
     println!("what is your user in the compnay");
     println!("if administrator(press a)
@@ -15,46 +16,34 @@ fn main(){
     let mut contents = String::new();
     file.read_to_string(&mut contents).unwrap();
     print!("{}", contents);
-
+    } else
+    if user == "p" {
     let mut file = std::fs::File::open("projects_tb.sql").unwrap();
     let mut contents = String::new();
     file.read_to_string(&mut contents).unwrap();
     print!("{}", contents);
-
+    } else
+    if user == "e" {
     let mut file = std::fs::File::open("staff_tb.sql").unwrap();
     let mut contents = String::new();
     file.read_to_string(&mut contents).unwrap();
     print!("{}", contents);
-
+    } else
+    if user == "c" {                
     let mut file = std::fs::File::open("customer_tb.sql").unwrap();
     let mut contents = String::new();
     file.read_to_string(&mut contents).unwrap();
     print!("{}", contents);
-
+    } else
+    if user =="v" {
     let mut file = std::fs::File::open("dataplan_tb.sql").unwrap();
     let mut contents = String::new();
     file.read_to_string(&mut contents).unwrap();
     print!("{}", contents);
-
-    if user is an administrator
-    {
-        println!("the application returns the database structure");
+    } else {
+        println!("incorrect input");
     }
-    else if user is not an administrator
-    {
-        println!("the application does not return the database structure");
-    }
-
-    if user is a project manager
-    {
-        println!("the application returns the structure of the project table");
-    }
-    else if user is not a project manager
-    {
-        println!("the application does not return the structure of the project table")
-    }
-
-    if user is an employee
-    {
-    println!("the application returns the structure of the project table");
-    }
+}
+    
+       
+   
